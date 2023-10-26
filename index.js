@@ -189,8 +189,9 @@ searchBookButton.addEventListener("submit", (e) => {
     }
   };
 
-  if (rakBelumSelesaiDibaca.length === 0 || rakSelesaiDibaca.length === 0) {
-    Swal.fire("Yah, bukunya gak ada:(");
+  if (rakBelumSelesaiDibaca.length === 0 || rakSelesaiDibaca.length === 0 || rakBelumSelesaiDibaca === null || rakSelesaiDibaca === null) {
+    console.log(rakBelumSelesaiDibaca);
+    console.log(rakSelesaiDibaca);
   } else {
     const filteredCompleteBooks = cekRakBelumSelesaiDibaca(titleFromUser, rakSelesaiDibaca);
     const filteredNotCompleteBooks = cekRakSelesaiDibaca(titleFromUser, rakBelumSelesaiDibaca);
