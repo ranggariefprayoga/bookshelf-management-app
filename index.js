@@ -191,7 +191,6 @@ searchBookButton.addEventListener("submit", (e) => {
 
   if (rakBelumSelesaiDibaca.length === 0 || rakSelesaiDibaca.length === 0) {
     Swal.fire("Yah, bukunya gak ada:(");
-    console.log("masuk sini");
   } else {
     const filteredCompleteBooks = cekRakBelumSelesaiDibaca(titleFromUser, rakSelesaiDibaca);
     const filteredNotCompleteBooks = cekRakSelesaiDibaca(titleFromUser, rakBelumSelesaiDibaca);
